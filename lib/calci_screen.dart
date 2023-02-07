@@ -147,17 +147,17 @@ class _CalciState extends State<Calci> {
       } else {
         return null;
       }
-      if (text == '=') {
-        result = calculate();
-        userInput = result;
+    }
+    if (text == '=') {
+      result = calculate();
+      userInput = result;
 
-        if (userInput.endsWith('.0')) {
-          userInput = userInput.replaceAll('.0', '');
-        }
-        if (result.endsWith('.0')) {
-          result = result.replaceAll('0', '');
-          return;
-        }
+      if (userInput.endsWith('.0')) {
+        userInput = userInput.replaceAll('.0', '');
+      }
+      if (result.endsWith('.0')) {
+        result = result.replaceAll('0', '');
+        return;
       }
     }
     userInput = userInput + text;
